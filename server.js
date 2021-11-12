@@ -49,7 +49,9 @@ app.use(cors({
     allowMethods: ['GET', 'POST', 'PUT', 'DELETE'],
   }));
 app.use(koaBody({
-    json: true
+    urlencoded: true,
+  multipart: true,
+  json: true,
 }));
 
 const router = new Router();
